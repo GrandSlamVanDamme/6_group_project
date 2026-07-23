@@ -1,0 +1,27 @@
+---
+title: "Simplification"
+format: html
+jupyter: python3
+highlight-style: default
+code-block-bg: "#000000"
+---
+
+
+::: {.columns}
+
+::: {.column}
+
+# Assumptions
+
+1. Our system has only one source of uncertainty, the 
+
+:::
+
+::: {.column}
+
+# Simplifications
+
+:::
+
+:::
+
