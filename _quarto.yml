@@ -3,7 +3,7 @@ project:
   output-dir: docs 
 
 website:
-  title: "MATH 283 Unit 6 Group Project: Shedding a Light on Quality Control"
+  title: "MATH 283 Unit 6 Group Project: Shedding a Light on Quality Control Anxiety"
   navbar:
     left:
       - href: index.qmd
