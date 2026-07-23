@@ -8,8 +8,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: PART_1.qmd
-        text: I
   page-footer: 
     border: true
     left: "Corey Silver BYU-I 2026©"
