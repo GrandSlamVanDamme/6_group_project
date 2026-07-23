@@ -2,7 +2,7 @@
 /* Generated with google gemini, no copyright on anything, opensource everything forever */
 
 body, h1, h2, h3, h4, p, div {
-    font-family: "Times New Roman", Serif, Monospace !important;
+    font-family: "Gill Sans", Serif, Monospace !important;
     background-color: #800000 !important; /* Classic Windows gray background */
     color: #E6A300 !important;
 }
@@ -18,7 +18,7 @@ a:visited {
 
 /* Chunky, archaic navigation bar */
 .navbar {
-    font-family: "Comic Sans MS", Cursive, Monospace !important;
+    font-family: "Serif", Cursive, Monospace !important;
     background-color: #C0C0C0 !important; /* Navy blue */
     border-bottom: 5px ridge #ffffff !important;
 }

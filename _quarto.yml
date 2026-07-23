@@ -3,11 +3,27 @@ project:
   output-dir: docs 
 
 website:
-  title: "MATH 283 Unit 6 Group Project: Shedding a Light on Quality Control Anxiety"
+  title: "MATH 283 Unit 6 Group Project: Shedding a Light on Quality Control"
   navbar:
     left:
       - href: index.qmd
         text: Home
+      - href: I.qmd
+        text: Contextualization 
+      - href: II.qmd
+        text: Simplification 
+      - href: III.qmd
+        text: Definition   
+      - href: IV.qmd
+        text: Formulation   
+      - href: V.qmd
+        text: Analysis  
+      - href: VI.qmd
+        text: Interpretation 
+      - href: VII.qmd
+        text: Validation   
+      - href: VIII.qmd
+        text: Revision  
   page-footer: 
     border: true
     left: "Corey Silver BYU-I 2026©"
