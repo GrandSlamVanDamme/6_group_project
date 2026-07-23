@@ -26,7 +26,7 @@ website:
         text: Revision  
   page-footer: 
     border: true
-    left: "Corey Silver BYU-I 2026©"
+    left: '<img src: resized_rat_labs.png alt: logo width = 40>'
 format:
   html:
     toc: true
