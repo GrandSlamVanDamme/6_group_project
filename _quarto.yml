@@ -24,9 +24,11 @@ website:
         text: Validation   
       - href: VIII.qmd
         text: Revision  
+      - href: IX.qmd
+        text: Bibliography and Ephemera
   page-footer: 
     border: true
-    left: '<img src: resized_rat_labs.png alt: logo width = 40>'
+    left: '<img src: resized_rat_labs.png, alt: logo width = 40>'
 format:
   html:
     toc: true
