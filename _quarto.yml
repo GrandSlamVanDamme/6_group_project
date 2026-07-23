@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs 
+
+website:
+  title: "MATH 283 Unit 6 Group Project: Shedding a Light on Quality Control"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: PART_1.qmd
+        text: I
+  page-footer: 
+    border: true
+    left: "Corey Silver BYU-I 2026©"
+format:
+  html:
+    toc: true
+    # number-sections: true
+    # number-depth: 3
+    code-fold: true
+    code-summary: "EXPAND"
+    theme: default   # This strips out the default
+    css: styles.css  
