@@ -1,25 +1,25 @@
 /* Override modern fonts with 1998 defaults */
-/* Generated with google gemini, no copyright on anything, opensource everything forever */
+/* GENERATED WITH GEMINI, no copyright on anything, opensource everything forever */
 
 body, h1, h2, h3, h4, p, div {
-    font-family: "Gill Sans", Serif, Monospace !important;
-    background-color: #800000 !important; /* Classic Windows gray background */
-    color: #E6A300 !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+    background-color: #c0c0c0 !important;
+    color: #00e68269 !important;
 }
 
 /* Authentic Web 1.0 Hyperlinks */
 a {
-    color: #C0C0C0 !important;
+    color: #911616 !important;
     text-decoration: underline !important;
 }
 a:visited {
-    color: #388557 !important; /* The classic purple visited link */
+    color: #100553 !important; /* The classic purple visited link */
 }
 
 /* Chunky, archaic navigation bar */
 .navbar {
-    font-family: "Serif", Cursive, Monospace !important;
-    background-color: #C0C0C0 !important; /* Navy blue */
+    font-family: fantasy, Cursive, Monospace !important;
+    background-color: #C0C0C0 !important; 
     border-bottom: 5px ridge #ffffff !important;
 }
 .navbar a {
@@ -28,8 +28,8 @@ a:visited {
 
 /* Harsh, unrounded image borders */
 img {
-    border: 3px solid #C0C0C0 !important;
-    border-radius: 0px !important; 
+    border: 10px solid #000000 !important;
+    border-radius: 4px !important; 
 }
 
 /* Eradicate modern grey image captions */

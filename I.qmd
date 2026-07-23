@@ -6,3 +6,21 @@ highlight-style: default
 code-block-bg: "#000000"
 ---
 
+::: {.columns}
+
+::: {.column}
+
+![Project Assignment Sheet](proj_6_problem_statement.png)
+
+:::
+
+::: {.column}
+
+## DEPENDING ON DEFECT RATE AND DISCARD THRESHOLD, HOW CAN A MANUFACTURER BALANCE RISK OF FALSE POSITIVES AND FALSE NEGATIVES IN THEIR QUALITY CONTROL PROCEDURE?
+
+:::
+
+:::
+
+
+
