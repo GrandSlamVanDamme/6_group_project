@@ -219,11 +219,22 @@ f(x)=\frac{\binom{K}{x}\binom{N-K}{n-x}}{\binom{N}{n}}
 </section>
 <section id="model-development-ii" class="level2">
 <h2 class="anchored" data-anchor-id="model-development-ii">Model Development II</h2>
-<p>The cumulative distribution function (CDF) <span class="math inline">\(F(X\leq x)\)</span> for hypergeometric random variable <span class="math inline">\(X\)</span> can be used, <em>given that the number of defective bulbs in the batch is known</em> to find the probability of there being more than <span class="math inline">\(x\)</span> or fewer than <span class="math inline">\(x\)</span> defective bulbs in a randomly selected batch. We’ll be able to use that to easily determine the false positive chance (chance that a sample passes given <span class="math inline">\(x\)</span> defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always <span class="math inline">\(0\)</span> because of the testing method. We’ll discuss that in section VII.</p>
+<p>The cumulative distribution function (CDF) <span class="math inline">\(F(X\leq x)\)</span> for hypergeometric random variable <span class="math inline">\(X\)</span> can be used, <em>given that the number of defective bulbs in the batch is known</em> to find the probability of there being more than <span class="math inline">\(x\)</span> or fewer than <span class="math inline">\(x\)</span> defective bulbs in a randomly selected sample. We’ll be able to use that to easily determine the false positive chance (chance that a sample passes given <span class="math inline">\(x\)</span> defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always <span class="math inline">\(0\)</span> because of the testing method. We’ll discuss that in section VII.</p>
 </section>
 <section id="model-development-iii" class="level2">
 <h2 class="anchored" data-anchor-id="model-development-iii">Model Development III</h2>
-<p>It’s easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing <span class="math inline">\(x\)</span> bad bulbs given that we pass it through testing or reject it? Recall that we made</p>
+<p>It’s easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing <span class="math inline">\(x\)</span> bad bulbs given that we pass a sample through testing or reject it? Recall that a batch is rejected if three or more defects are found in the sample. So what, then, is the probability of a batch containing <span class="math inline">\(k\)</span> defects given that a sample is rejected? That a sample is passed? We’ll use <strong>Bayes’ Theorem</strong>, a powerful tool for determining conditional probabilities, to figure this out. Bayes’ Theorem states that, for events <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, we have <span class="math display">\[
+P(B|A)=\frac{P(A|B)\cdot P(B)}{P(A|B)\cdot P(B)+P(A|B')\cdot P(B')}.
+\]</span> (BYUI Math Dept. 50)</p>
+<p>This means that we can find <span class="math inline">\(P(k\text{ defects in batch}|\text{sample is rejected})\)</span>, because we already know:</p>
+<ol type="1">
+<li><span class="math inline">\(P(\text{sample is rejected}|0\text{ defects in batch}) = 0\)</span>.</li>
+<li><span class="math inline">\(P(\text{sample is rejected}|k\text{ defects in batch}) = f(x)\)</span>.</li>
+<li><span class="math inline">\(P(\text{sample is rejected}|(K\neq k_1)\text{ defects in batch}) = 0 +  P(\text{sample is rejected}|K=k_2 \cap K=k_3\text{ defects in batch})\)</span>.</li>
+<li><span class="math inline">\(P(k\text{ defects in batch})=\frac{1}{3}\)</span>.</li>
+<li><span class="math inline">\(P(k\text{ defects in batch}')=\frac{2}{3}\)</span>.</li>
+</ol>
+<p>We can then do the same for <span class="math inline">\(P(k\text{ defects in batch}|\text{sample is passed})\)</span>.</p>
 
 
 </section>
@@ -633,7 +644,7 @@ f(x)=\frac{\binom{K}{x}\binom{N-K}{n-x}}{\binom{N}{n}}
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>&lt;img src: resized_rat_labs.png, alt: logo width = 40&gt;</p>
+<p>&lt;img src: “resized_rat_labs.png”&gt;</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

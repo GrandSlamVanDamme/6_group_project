@@ -1,0 +1,54 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Contextualization\"\n",
+        "format: html\n",
+        "jupyter: python3\n",
+        "highlight-style: default\n",
+        "code-block-bg: \"#000000\"\n",
+        "---\n",
+        "\n",
+        "::: {.columns}\n",
+        "\n",
+        "::: {.column}\n",
+        "\n",
+        "![Project Assignment Sheet](proj_6_problem_statement.png)\n",
+        "\n",
+        ":::\n",
+        "\n",
+        "::: {.column}\n",
+        "\n",
+        "## DEPENDING ON DEFECT RATE AND DISCARD THRESHOLD, HOW CAN A MANUFACTURER BALANCE RISK OF FALSE POSITIVES AND FALSE NEGATIVES IN THEIR QUALITY CONTROL PROCEDURE?\n",
+        "\n",
+        "### Background\n",
+        "\n",
+        "In the case of a lightbulb factory which institutes randomized sample testing from batches of bulbs produced, how can we determine the relative impact on overhead costs of different test parameters and defect rates? We will answer three questions:\n",
+        "\n",
+        "#### 1. What is the probability of batch rejection given a defect rate?\n",
+        "\n",
+        "#### 1. What is the probability of batch acceptance given a defect rate?\n",
+        "\n",
+        "#### 1. Given open parameters, What is the impact on profit?\n",
+        "\n",
+        ":::\n",
+        "\n",
+        ":::\n"
+      ],
+      "id": "d52ec7de"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/grandslamvandamme/Documents/283_math_spring_26/6_group_project/.venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

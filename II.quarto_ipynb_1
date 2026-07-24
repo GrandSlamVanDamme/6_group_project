@@ -1,0 +1,38 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Simplification\"\n",
+        "format: html\n",
+        "jupyter: python3\n",
+        "highlight-style: default\n",
+        "code-block-bg: \"#000000\"\n",
+        "---\n",
+        "\n",
+        "# Assumptions and Simplifications\n",
+        "\n",
+        "1. A *defective batch* is a batch of 200 bulbs containing any defective bulbs.\n",
+        "1. The percentages of defects given in the problem statement reflect static proportions per batch. This means that a batch of 200 bulbs could contain exactly 2, 4, or 6 defective bulbs.\n",
+        "1. Random sampling. Test samples are chosen at random without replacement.\n",
+        "1. All counts are exact. This means that a sample of 20 *always* consists of exactly 20 bulbs, with no error tolerance.\n",
+        "1. We reduce the complexity of [cost of poor quality (CPOQ)](https://9001-2026.com/blogs/cost-of-poor-quality) to an arbitrary $1:100$ ratio. We suppose that a faulty bulb causes a loss equal to $10000\\%$ of its manufacturing cost.\n",
+        "1. WE’LL ASSUME IDEAL CONDITIONS AROUND THE TESTING PROCESS (NO HANDLING ERRORS, EQUIPMENT ERRORS, OR DIFFERENCES IN THE TESTING PROCESS BY BATCH SIZE).\n",
+        "1. We'll assume parameters where none are given, and discuss their impact on cost and probabilties.\n"
+      ],
+      "id": "76dac8fe"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/grandslamvandamme/Documents/283_math_spring_26/6_group_project/.venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

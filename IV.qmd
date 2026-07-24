@@ -26,8 +26,22 @@ A hypergeometric distribution is ideal for modeling this system. We have a popul
 
 ## Model Development II
 
-The cumulative distribution function (CDF) $F(X\leq x)$ for hypergeometric random variable $X$ can be used, *given that the number of defective bulbs in the batch is known* to find the probability of there being more than $x$ or fewer than $x$ defective bulbs in a randomly selected batch. We'll be able to use that to easily determine the false positive chance (chance that a sample passes given $x$ defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always $0$ because of the testing method. We'll discuss that in section VII.
+The cumulative distribution function (CDF) $F(X\leq x)$ for hypergeometric random variable $X$ can be used, *given that the number of defective bulbs in the batch is known* to find the probability of there being more than $x$ or fewer than $x$ defective bulbs in a randomly selected sample. We'll be able to use that to easily determine the false positive chance (chance that a sample passes given $x$ defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always $0$ because of the testing method. We'll discuss that in section VII.
 
 ## Model Development III
 
-It's easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing $x$ bad bulbs given that we pass it through testing or reject it? Recall that we made
+It's easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing $x$ bad bulbs given that we pass a sample through testing or reject it? Recall that a batch is rejected if three or more defects are found in the sample. So what, then, is the probability of a batch containing $k$ defects given that a sample is rejected? That a sample is passed? We'll use **Bayes' Theorem**, a powerful tool for determining conditional probabilities, to figure this out. Bayes' Theorem states that, for events $A$ and $B$, we have
+$$
+P(B|A)=\frac{P(A|B)\cdot P(B)}{P(A|B)\cdot P(B)+P(A|B')\cdot P(B')}.
+$$
+(BYUI Math Dept. 50)
+
+This means that we can find $P(k\text{ defects in batch}|\text{sample is rejected})$, because we already know:
+
+1. $P(\text{sample is rejected}|0\text{ defects in batch}) = 0$.
+1. $P(\text{sample is rejected}|k\text{ defects in batch}) = f(x)$.
+1. $P(\text{sample is rejected}|(K\neq k_1)\text{ defects in batch}) = 0 +  P(\text{sample is rejected}|K=k_2 \cap K=k_3\text{ defects in batch})$.
+1. $P(k\text{ defects in batch})=\frac{1}{3}$.
+1. $P(k\text{ defects in batch}')=\frac{2}{3}$.
+
+We can then do the same for $P(k\text{ defects in batch}|\text{sample is passed})$.

@@ -8,7 +8,9 @@ code-block-bg: "#000000"
 
 # Assumptions and Simplifications
 
+1. Because $P(x \text{ defects in batch})$ is not given in the problem statement, we'll assume that a batch can have either 2, 4, or 6 defective bulbs total with a uniform discrete distribution. This means $P(x \text{ defects in batch})=\frac{1}{3}$.
 1. A *defective batch* is a batch of 200 bulbs containing any defective bulbs.
+1. A batch will be rejected if a sample test detects 3 or more defective bulbs.
 1. The percentages of defects given in the problem statement reflect static proportions per batch. This means that a batch of 200 bulbs could contain exactly 2, 4, or 6 defective bulbs.
 1. Random sampling. Test samples are chosen at random without replacement.
 1. All counts are exact. This means that a sample of 20 *always* consists of exactly 20 bulbs, with no error tolerance.

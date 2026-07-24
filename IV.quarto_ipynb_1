@@ -1,0 +1,60 @@
+{
+  "cells": [
+    {
+      "cell_type": "raw",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: Formulation\n",
+        "format: html\n",
+        "highlight-style: default\n",
+        "code-block-bg: '#000000'\n",
+        "---"
+      ],
+      "id": "710f11f7"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "\\\n",
+        "\\\n",
+        "\n",
+        "\n",
+        "## Model Development I\n",
+        "\n",
+        "A hypergeometric random variable is a discrete random variable representing the number of successes observed when $n$ items are drawn without replacement from a population of $N$ items comprised of $K$ successes and $N - K$ failures. The quantities $N$, $K$, and $n$ are the parameters of this distribution. \n",
+        "\n",
+        "We use the notation $X \\sim \\text{Hypergeometric}(N, K, n)$ to say that the value of random variable $X$ follows a hypergeometric distribution with parameters $N$, $K$, and $n$.\n",
+        "\n",
+        "Its PMF (probability mass function, the function which returns $P(X = x)$ for input value $x$ of random variable $X$) is\n",
+        "$$\n",
+        "f(x)=\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}{\\binom{N}{n}}\n",
+        "$$\n",
+        "\n",
+        "(BYUI Math Dept 112).\n",
+        "\n",
+        "A hypergeometric distribution is ideal for modeling this system. We have a population (a production batch of lightbulbs, parameter $N$) with a known number of flagged outcomes (defective bulbs, parameter $k$) from which a random sample is drawn (parameter $n$) without replacement (meaning that each drawing is **not** independent of previous drawings).\n",
+        "\n",
+        "## Model Development II\n",
+        "\n",
+        "The cumulative distribution function (CDF) $F(X\\leq x)$ for hypergeometric random variable $X$ can be used, *given that the number of defective bulbs in the batch is known* to find the probability of there being more than $x$ or fewer than $x$ defective bulbs in a randomly selected batch. We'll be able to use that to easily determine the false positive chance (chance that a sample passes given $x$ defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always $0$ because of the testing method. We'll discuss that in section VII.\n",
+        "\n",
+        "## Model Development III\n",
+        "\n",
+        "It's easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing $x$ bad bulbs given that we pass it through testing or reject it? Recall that we made"
+      ],
+      "id": "e180aa74"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/grandslamvandamme/Documents/283_math_spring_26/6_group_project/.venv/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

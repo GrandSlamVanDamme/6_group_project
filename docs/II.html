@@ -205,7 +205,9 @@ window.Quarto = {
 <section id="assumptions-and-simplifications" class="level1">
 <h1>Assumptions and Simplifications</h1>
 <ol type="1">
+<li>Because <span class="math inline">\(P(x \text{ defects in batch})\)</span> is not given in the problem statement, we’ll assume that a batch can have either 2, 4, or 6 defective bulbs total with a uniform discrete distribution. This means <span class="math inline">\(P(x \text{ defects in batch})=\frac{1}{3}\)</span>.</li>
 <li>A <em>defective batch</em> is a batch of 200 bulbs containing any defective bulbs.</li>
+<li>A batch will be rejected if a sample test detects 3 or more defective bulbs.</li>
 <li>The percentages of defects given in the problem statement reflect static proportions per batch. This means that a batch of 200 bulbs could contain exactly 2, 4, or 6 defective bulbs.</li>
 <li>Random sampling. Test samples are chosen at random without replacement.</li>
 <li>All counts are exact. This means that a sample of 20 <em>always</em> consists of exactly 20 bulbs, with no error tolerance.</li>
@@ -622,7 +624,7 @@ window.Quarto = {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>&lt;img src: resized_rat_labs.png, alt: logo width = 40&gt;</p>
+<p>&lt;img src: “resized_rat_labs.png”&gt;</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;

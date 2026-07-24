@@ -11,14 +11,14 @@
     "href": "IV.html#model-development-ii",
     "title": "Formulation",
     "section": "Model Development II",
-    "text": "Model Development II\nThe cumulative distribution function (CDF) \\(F(X\\leq x)\\) for hypergeometric random variable \\(X\\) can be used, given that the number of defective bulbs in the batch is known to find the probability of there being more than \\(x\\) or fewer than \\(x\\) defective bulbs in a randomly selected batch. We’ll be able to use that to easily determine the false positive chance (chance that a sample passes given \\(x\\) defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always \\(0\\) because of the testing method. We’ll discuss that in section VII."
+    "text": "Model Development II\nThe cumulative distribution function (CDF) \\(F(X\\leq x)\\) for hypergeometric random variable \\(X\\) can be used, given that the number of defective bulbs in the batch is known to find the probability of there being more than \\(x\\) or fewer than \\(x\\) defective bulbs in a randomly selected sample. We’ll be able to use that to easily determine the false positive chance (chance that a sample passes given \\(x\\) defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always \\(0\\) because of the testing method. We’ll discuss that in section VII."
   },
   {
     "objectID": "IV.html#model-development-iii",
     "href": "IV.html#model-development-iii",
     "title": "Formulation",
     "section": "Model Development III",
-    "text": "Model Development III\nIt’s easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing \\(x\\) bad bulbs given that we pass it through testing or reject it? Recall that we made"
+    "text": "Model Development III\nIt’s easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing \\(x\\) bad bulbs given that we pass a sample through testing or reject it? Recall that a batch is rejected if three or more defects are found in the sample. So what, then, is the probability of a batch containing \\(k\\) defects given that a sample is rejected? That a sample is passed? We’ll use Bayes’ Theorem, a powerful tool for determining conditional probabilities, to figure this out. Bayes’ Theorem states that, for events \\(A\\) and \\(B\\), we have \\[\nP(B|A)=\\frac{P(A|B)\\cdot P(B)}{P(A|B)\\cdot P(B)+P(A|B')\\cdot P(B')}.\n\\] (BYUI Math Dept. 50)\nThis means that we can find \\(P(k\\text{ defects in batch}|\\text{sample is rejected})\\), because we already know:\n\n\\(P(\\text{sample is rejected}|0\\text{ defects in batch}) = 0\\).\n\\(P(\\text{sample is rejected}|k\\text{ defects in batch}) = f(x)\\).\n\\(P(\\text{sample is rejected}|(K\\neq k_1)\\text{ defects in batch}) = 0 +  P(\\text{sample is rejected}|K=k_2 \\cap K=k_3\\text{ defects in batch})\\).\n\\(P(k\\text{ defects in batch})=\\frac{1}{3}\\).\n\\(P(k\\text{ defects in batch}')=\\frac{2}{3}\\).\n\nWe can then do the same for \\(P(k\\text{ defects in batch}|\\text{sample is passed})\\)."
   },
   {
     "objectID": "I.html",
@@ -35,6 +35,20 @@
     "text": "In the case of a lightbulb factory which institutes randomized sample testing from batches of bulbs produced, how can we determine the relative impact on overhead costs of different test parameters and defect rates? We will answer three questions:"
   },
   {
+    "objectID": "IX.html",
+    "href": "IX.html",
+    "title": "MATH 283 Unit 6 Group Project: Shedding a Light on Quality Control",
+    "section": "",
+    "text": "RATLABS logo, Corey Silver 2026"
+  },
+  {
+    "objectID": "IX.html#image-credits",
+    "href": "IX.html#image-credits",
+    "title": "MATH 283 Unit 6 Group Project: Shedding a Light on Quality Control",
+    "section": "",
+    "text": "RATLABS logo, Corey Silver 2026"
+  },
+  {
     "objectID": "IX.html#resources",
     "href": "IX.html#resources",
     "title": "MATH 283 Unit 6 Group Project: Shedding a Light on Quality Control",
@@ -46,7 +60,7 @@
     "href": "II.html",
     "title": "Simplification",
     "section": "",
-    "text": "Assumptions and Simplifications\n\nA defective batch is a batch of 200 bulbs containing any defective bulbs.\nThe percentages of defects given in the problem statement reflect static proportions per batch. This means that a batch of 200 bulbs could contain exactly 2, 4, or 6 defective bulbs.\nRandom sampling. Test samples are chosen at random without replacement.\nAll counts are exact. This means that a sample of 20 always consists of exactly 20 bulbs, with no error tolerance.\nWe reduce the complexity of cost of poor quality (CPOQ) to an arbitrary \\(1:100\\) ratio. We suppose that a faulty bulb causes a loss equal to \\(10000\\%\\) of its manufacturing cost.\nWE’LL ASSUME IDEAL CONDITIONS AROUND THE TESTING PROCESS (NO HANDLING ERRORS, EQUIPMENT ERRORS, OR DIFFERENCES IN THE TESTING PROCESS BY BATCH SIZE).\nWe’ll assume parameters where none are given, and discuss their impact on cost and probabilties."
+    "text": "Assumptions and Simplifications\n\nBecause \\(P(x \\text{ defects in batch})\\) is not given in the problem statement, we’ll assume that a batch can have either 2, 4, or 6 defective bulbs total with a uniform discrete distribution. This means \\(P(x \\text{ defects in batch})=\\frac{1}{3}\\).\nA defective batch is a batch of 200 bulbs containing any defective bulbs.\nA batch will be rejected if a sample test detects 3 or more defective bulbs.\nThe percentages of defects given in the problem statement reflect static proportions per batch. This means that a batch of 200 bulbs could contain exactly 2, 4, or 6 defective bulbs.\nRandom sampling. Test samples are chosen at random without replacement.\nAll counts are exact. This means that a sample of 20 always consists of exactly 20 bulbs, with no error tolerance.\nWe reduce the complexity of cost of poor quality (CPOQ) to an arbitrary \\(1:100\\) ratio. We suppose that a faulty bulb causes a loss equal to \\(10000\\%\\) of its manufacturing cost.\nWE’LL ASSUME IDEAL CONDITIONS AROUND THE TESTING PROCESS (NO HANDLING ERRORS, EQUIPMENT ERRORS, OR DIFFERENCES IN THE TESTING PROCESS BY BATCH SIZE).\nWe’ll assume parameters where none are given, and discuss their impact on cost and probabilties."
   },
   {
     "objectID": "III.html",
