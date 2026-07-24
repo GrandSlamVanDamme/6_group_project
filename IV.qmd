@@ -5,8 +5,11 @@ jupyter: python3
 highlight-style: default
 code-block-bg: "#000000"
 ---
+\
+\
 
-# Model Development I
+
+## Model Development I
 
 A hypergeometric random variable is a discrete random variable representing the number of successes observed when $n$ items are drawn without replacement from a population of $N$ items comprised of $K$ successes and $N - K$ failures. The quantities $N$, $K$, and $n$ are the parameters of this distribution. 
 

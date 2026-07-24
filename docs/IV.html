@@ -176,11 +176,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#model-development-i" id="toc-model-development-i" class="nav-link active" data-scroll-target="#model-development-i">Model Development I</a>
-  <ul class="collapse">
+  <li><a href="#model-development-i" id="toc-model-development-i" class="nav-link active" data-scroll-target="#model-development-i">Model Development I</a></li>
   <li><a href="#model-development-ii" id="toc-model-development-ii" class="nav-link" data-scroll-target="#model-development-ii">Model Development II</a></li>
   <li><a href="#model-development-iii" id="toc-model-development-iii" class="nav-link" data-scroll-target="#model-development-iii">Model Development III</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -206,8 +204,11 @@ window.Quarto = {
 </header>
 
 
-<section id="model-development-i" class="level1">
-<h1>Model Development I</h1>
+<p><br>
+<br>
+</p>
+<section id="model-development-i" class="level2">
+<h2 class="anchored" data-anchor-id="model-development-i">Model Development I</h2>
 <p>A hypergeometric random variable is a discrete random variable representing the number of successes observed when <span class="math inline">\(n\)</span> items are drawn without replacement from a population of <span class="math inline">\(N\)</span> items comprised of <span class="math inline">\(K\)</span> successes and <span class="math inline">\(N - K\)</span> failures. The quantities <span class="math inline">\(N\)</span>, <span class="math inline">\(K\)</span>, and <span class="math inline">\(n\)</span> are the parameters of this distribution.</p>
 <p>We use the notation <span class="math inline">\(X \sim \text{Hypergeometric}(N, K, n)\)</span> to say that the value of random variable <span class="math inline">\(X\)</span> follows a hypergeometric distribution with parameters <span class="math inline">\(N\)</span>, <span class="math inline">\(K\)</span>, and <span class="math inline">\(n\)</span>.</p>
 <p>Its PMF (probability mass function, the function which returns <span class="math inline">\(P(X = x)\)</span> for input value <span class="math inline">\(x\)</span> of random variable <span class="math inline">\(X\)</span>) is <span class="math display">\[
@@ -215,6 +216,7 @@ f(x)=\frac{\binom{K}{x}\binom{N-K}{n-x}}{\binom{N}{n}}
 \]</span></p>
 <p>(BYUI Math Dept 112).</p>
 <p>A hypergeometric distribution is ideal for modeling this system. We have a population (a production batch of lightbulbs, parameter <span class="math inline">\(N\)</span>) with a known number of flagged outcomes (defective bulbs, parameter <span class="math inline">\(k\)</span>) from which a random sample is drawn (parameter <span class="math inline">\(n\)</span>) without replacement (meaning that each drawing is <strong>not</strong> independent of previous drawings).</p>
+</section>
 <section id="model-development-ii" class="level2">
 <h2 class="anchored" data-anchor-id="model-development-ii">Model Development II</h2>
 <p>The cumulative distribution function (CDF) <span class="math inline">\(F(X\leq x)\)</span> for hypergeometric random variable <span class="math inline">\(X\)</span> can be used, <em>given that the number of defective bulbs in the batch is known</em> to find the probability of there being more than <span class="math inline">\(x\)</span> or fewer than <span class="math inline">\(x\)</span> defective bulbs in a randomly selected batch. We’ll be able to use that to easily determine the false positive chance (chance that a sample passes given <span class="math inline">\(x\)</span> defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always <span class="math inline">\(0\)</span> because of the testing method. We’ll discuss that in section VII.</p>
@@ -224,7 +226,6 @@ f(x)=\frac{\binom{K}{x}\binom{N-K}{n-x}}{\binom{N}{n}}
 <p>It’s easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing <span class="math inline">\(x\)</span> bad bulbs given that we pass it through testing or reject it? Recall that we made</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

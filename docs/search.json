@@ -1,24 +1,24 @@
 [
   {
-    "objectID": "IV.html",
-    "href": "IV.html",
+    "objectID": "IV.html#model-development-i",
+    "href": "IV.html#model-development-i",
     "title": "Formulation",
-    "section": "",
-    "text": "A hypergeometric random variable is a discrete random variable representing the number of successes observed when \\(n\\) items are drawn without replacement from a population of \\(N\\) items comprised of \\(K\\) successes and \\(N - K\\) failures. The quantities \\(N\\), \\(K\\), and \\(n\\) are the parameters of this distribution.\nWe use the notation \\(X \\sim \\text{Hypergeometric}(N, K, n)\\) to say that the value of random variable \\(X\\) follows a hypergeometric distribution with parameters \\(N\\), \\(K\\), and \\(n\\).\nIts PMF (probability mass function, the function which returns \\(P(X = x)\\) for input value \\(x\\) of random variable \\(X\\)) is \\[\nf(x)=\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}{\\binom{N}{n}}\n\\]\n(BYUI Math Dept 112).\nA hypergeometric distribution is ideal for modeling this system. We have a population (a production batch of lightbulbs, parameter \\(N\\)) with a known number of flagged outcomes (defective bulbs, parameter \\(k\\)) from which a random sample is drawn (parameter \\(n\\)) without replacement (meaning that each drawing is not independent of previous drawings).\n\n\nThe cumulative distribution function (CDF) \\(F(X\\leq x)\\) for hypergeometric random variable \\(X\\) can be used, given that the number of defective bulbs in the batch is known to find the probability of there being more than \\(x\\) or fewer than \\(x\\) defective bulbs in a randomly selected batch. We’ll be able to use that to easily determine the false positive chance (chance that a sample passes given \\(x\\) defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always \\(0\\) because of the testing method. We’ll discuss that in section VII.\n\n\n\nIt’s easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing \\(x\\) bad bulbs given that we pass it through testing or reject it? Recall that we made"
+    "section": "Model Development I",
+    "text": "Model Development I\nA hypergeometric random variable is a discrete random variable representing the number of successes observed when \\(n\\) items are drawn without replacement from a population of \\(N\\) items comprised of \\(K\\) successes and \\(N - K\\) failures. The quantities \\(N\\), \\(K\\), and \\(n\\) are the parameters of this distribution.\nWe use the notation \\(X \\sim \\text{Hypergeometric}(N, K, n)\\) to say that the value of random variable \\(X\\) follows a hypergeometric distribution with parameters \\(N\\), \\(K\\), and \\(n\\).\nIts PMF (probability mass function, the function which returns \\(P(X = x)\\) for input value \\(x\\) of random variable \\(X\\)) is \\[\nf(x)=\\frac{\\binom{K}{x}\\binom{N-K}{n-x}}{\\binom{N}{n}}\n\\]\n(BYUI Math Dept 112).\nA hypergeometric distribution is ideal for modeling this system. We have a population (a production batch of lightbulbs, parameter \\(N\\)) with a known number of flagged outcomes (defective bulbs, parameter \\(k\\)) from which a random sample is drawn (parameter \\(n\\)) without replacement (meaning that each drawing is not independent of previous drawings)."
   },
   {
     "objectID": "IV.html#model-development-ii",
     "href": "IV.html#model-development-ii",
     "title": "Formulation",
-    "section": "",
-    "text": "The cumulative distribution function (CDF) \\(F(X\\leq x)\\) for hypergeometric random variable \\(X\\) can be used, given that the number of defective bulbs in the batch is known to find the probability of there being more than \\(x\\) or fewer than \\(x\\) defective bulbs in a randomly selected batch. We’ll be able to use that to easily determine the false positive chance (chance that a sample passes given \\(x\\) defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always \\(0\\) because of the testing method. We’ll discuss that in section VII."
+    "section": "Model Development II",
+    "text": "Model Development II\nThe cumulative distribution function (CDF) \\(F(X\\leq x)\\) for hypergeometric random variable \\(X\\) can be used, given that the number of defective bulbs in the batch is known to find the probability of there being more than \\(x\\) or fewer than \\(x\\) defective bulbs in a randomly selected batch. We’ll be able to use that to easily determine the false positive chance (chance that a sample passes given \\(x\\) defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always \\(0\\) because of the testing method. We’ll discuss that in section VII."
   },
   {
     "objectID": "IV.html#model-development-iii",
     "href": "IV.html#model-development-iii",
     "title": "Formulation",
-    "section": "",
-    "text": "It’s easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing \\(x\\) bad bulbs given that we pass it through testing or reject it? Recall that we made"
+    "section": "Model Development III",
+    "text": "Model Development III\nIt’s easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing \\(x\\) bad bulbs given that we pass it through testing or reject it? Recall that we made"
   },
   {
     "objectID": "I.html",
@@ -53,7 +53,7 @@
     "href": "III.html",
     "title": "Definition",
     "section": "",
-    "text": "System Parameters\n\nParameters\n\n\n\n\n\n\n\nPARAMETER\nMEANING\nVALUE\n\n\n\n\nn\nsample\n\\((20, 30, 40)\\)\n\n\nN\nbatch\n\\(200\\)\n\n\nk\n# defects/batch\n\\((2, 4, 6)\\)\n\n\n\\(C_m\\)\nproduction cost/bulb\n\\(\\$2.00^*\\)\n\n\n\\(C_d\\)\nloss per bad bulb\n\\(100C_m^{**}\\)\n\n\n\\(P_b\\)\nprofit per good bulb\n$\\(1.00^*\\)\n\n\n\n\\(^*\\) This Gemini conversation used to derive cost parameters for lightbulbs. As these estimates are generated by AI, exercise caution in using them as something other than proof-of-concept guesses for model formulation.\n\\(^{**}\\) This article was used to estimate the maximum cost of bad bulb in terms of regular production cost."
+    "text": "System Parameters\n\nParameters\n\n\n\n\n\n\n\nPARAMETER\nMEANING\nVALUE\n\n\n\n\nn\nsample\n\\((20, 30, 40)\\)\n\n\nN\nbatch\n\\(200\\)\n\n\nk\ndefects/batch\n\\((2, 4, 6)\\)\n\n\n\\(C_m\\)\nproduction cost/bulb\n\\(\\$2.00^*\\)\n\n\n\\(C_d\\)\nloss per bad bulb\n\\(100C_m^{**}\\)\n\n\n\\(P_b\\)\nprofit per good bulb\n\\(\\$1.00^*\\)\n\n\n\n\n\\(^*\\) This Gemini conversation used to derive cost parameters for lightbulbs. As these estimates are generated by AI, exercise caution in using them as something other than proof-of-concept guesses for model formulation.\n\\(^{**}\\) This article was used to estimate the maximum cost of bad bulb in terms of regular production cost."
   },
   {
     "objectID": "index.html",
