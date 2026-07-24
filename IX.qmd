@@ -11,4 +11,4 @@ https://color.adobe.com/create/color-wheel
 
 1. MATH 423 READINGS AND EXERCISES, BYUI MATH DEPT 2021
 
-1. 
+1. Quarto Documentation: https://www.quarto.org

@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -142,8 +171,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assumptions-and-simplifications" id="toc-assumptions-and-simplifications" class="nav-link active" data-scroll-target="#assumptions-and-simplifications">Assumptions and Simplifications</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -167,22 +202,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="columns">
-<div class="column">
-<section id="assumptions" class="level1">
-<h1>Assumptions</h1>
+<section id="assumptions-and-simplifications" class="level1">
+<h1>Assumptions and Simplifications</h1>
 <ol type="1">
-<li>Our system has only one source of uncertainty, the</li>
+<li>A <em>defective batch</em> is a batch of 200 bulbs containing any defective bulbs.</li>
+<li>The percentages of defects given in the problem statement reflect static proportions per batch. This means that a batch of 200 bulbs could contain exactly 2, 4, or 6 defective bulbs.</li>
+<li>Random sampling. Test samples are chosen at random without replacement.</li>
+<li>All counts are exact. This means that a sample of 20 <em>always</em> consists of exactly 20 bulbs, with no error tolerance.</li>
+<li>We reduce the complexity of <a href="https://9001-2026.com/blogs/cost-of-poor-quality">cost of poor quality (CPOQ)</a> to an arbitrary <span class="math inline">\(1:100\)</span> ratio. We suppose that a faulty bulb causes a loss equal to <span class="math inline">\(10000\%\)</span> of its manufacturing cost.</li>
+<li>WE’LL ASSUME IDEAL CONDITIONS AROUND THE TESTING PROCESS (NO HANDLING ERRORS, EQUIPMENT ERRORS, OR DIFFERENCES IN THE TESTING PROCESS BY BATCH SIZE).</li>
 </ol>
-</section>
-</div><div class="column">
-<section id="simplifications" class="level1">
-<h1>Simplifications</h1>
-</section>
-</div>
-</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

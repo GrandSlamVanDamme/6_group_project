@@ -6,22 +6,14 @@ highlight-style: default
 code-block-bg: "#000000"
 ---
 
+# Assumptions and Simplifications
 
-::: {.columns}
+1. A *defective batch* is a batch of 200 bulbs containing any defective bulbs.
+1. The percentages of defects given in the problem statement reflect static proportions per batch. This means that a batch of 200 bulbs could contain exactly 2, 4, or 6 defective bulbs.
+1. Random sampling. Test samples are chosen at random without replacement.
+1. All counts are exact. This means that a sample of 20 *always* consists of exactly 20 bulbs, with no error tolerance.
+1. We reduce the complexity of [cost of poor quality (CPOQ)](https://9001-2026.com/blogs/cost-of-poor-quality) to an arbitrary $1:100$ ratio. We suppose that a faulty bulb causes a loss equal to $10000\%$ of its manufacturing cost.
+1. WE’LL ASSUME IDEAL CONDITIONS AROUND THE TESTING PROCESS (NO HANDLING ERRORS, EQUIPMENT ERRORS, OR DIFFERENCES IN THE TESTING PROCESS BY BATCH SIZE).
+1. We'll assume parameters where none are given, and discuss their impact on cost and probabilties.
 
-::: {.column}
-
-# Assumptions
-
-1. Our system has only one source of uncertainty, the 
-
-:::
-
-::: {.column}
-
-# Simplifications
-
-:::
-
-:::
 

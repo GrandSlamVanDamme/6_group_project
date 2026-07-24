@@ -1,0 +1,30 @@
+---
+title: "Formulation"
+format: html
+jupyter: python3
+highlight-style: default
+code-block-bg: "#000000"
+---
+
+# Model Development I
+
+A hypergeometric random variable is a discrete random variable representing the number of successes observed when $n$ items are drawn without replacement from a population of $N$ items comprised of $K$ successes and $N - K$ failures. The quantities $N$, $K$, and $n$ are the parameters of this distribution. 
+
+We use the notation $X \sim \text{Hypergeometric}(N, K, n)$ to say that the value of random variable $X$ follows a hypergeometric distribution with parameters $N$, $K$, and $n$.
+
+Its PMF (probability mass function, the function which returns $P(X = x)$ for input value $x$ of random variable $X$) is
+$$
+f(x)=\frac{\binom{K}{x}\binom{N-K}{n-x}}{\binom{N}{n}}
+$$
+
+(BYUI Math Dept 112).
+
+A hypergeometric distribution is ideal for modeling this system. We have a population (a production batch of lightbulbs, parameter $N$) with a known number of flagged outcomes (defective bulbs, parameter $k$) from which a random sample is drawn (parameter $n$) without replacement (meaning that each drawing is **not** independent of previous drawings).
+
+## Model Development II
+
+The cumulative distribution function (CDF) $F(X\leq x)$ for hypergeometric random variable $X$ can be used, *given that the number of defective bulbs in the batch is known* to find the probability of there being more than $x$ or fewer than $x$ defective bulbs in a randomly selected batch. We'll be able to use that to easily determine the false positive chance (chance that a sample passes given $x$ defective bulbs in the batch) in testing. As may already be obvious, the false negative chance is always $0$ because of the testing method. We'll discuss that in section VII.
+
+## Model Development III
+
+It's easy to determine the chance of rejecting or passing a sample given that we know the amount of defective bulbs in the batch. But how do we find the chance of a batch containing $x$ bad bulbs given that we pass it through testing or reject it? Recall that we made

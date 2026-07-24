@@ -18,7 +18,7 @@
     "href": "II.html",
     "title": "Simplification",
     "section": "",
-    "text": "Assumptions\n\nOur system has only one source of uncertainty, the\n\n\n\n\nSimplifications"
+    "text": "Assumptions and Simplifications\n\nA defective batch is a batch of 200 bulbs containing any defective bulbs.\nThe percentages of defects given in the problem statement reflect static proportions per batch. This means that a batch of 200 bulbs could contain exactly 2, 4, or 6 defective bulbs.\nRandom sampling. Test samples are chosen at random without replacement.\nAll counts are exact. This means that a sample of 20 always consists of exactly 20 bulbs, with no error tolerance.\nWe reduce the complexity of cost of poor quality (CPOQ) to an arbitrary \\(1:100\\) ratio. We suppose that a faulty bulb causes a loss equal to \\(10000\\%\\) of its manufacturing cost.\nWE’LL ASSUME IDEAL CONDITIONS AROUND THE TESTING PROCESS (NO HANDLING ERRORS, EQUIPMENT ERRORS, OR DIFFERENCES IN THE TESTING PROCESS BY BATCH SIZE)."
   },
   {
     "objectID": "index.html",
